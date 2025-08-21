@@ -1,138 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Love in Haight Fairy Garden</title>
+  <meta name="description" content="A sidewalk garden and art installation bringing a little magic to the Haight Ashbury neighborhood of San Francisco.">
+  <meta property="og:title" content="Love in Haight Fairy Garden">
+  <meta property="og:description" content="A sidewalk garden and art installation bringing a little magic to the Haight Ashbury neighborhood of San Francisco.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Marcellus&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <nav class="nav">
-    <a class="brand" href="#">Love in Haight <span>Fairy Garden</span></a>
-    <button class="nav-toggle">☰</button>
-    <ul class="menu">
-      <li><a href="#history">History</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#explore">Explore</a></li>
-      <li><a href="#plantstand">Honesty Plant Stand</a></li>
-      <li><a href="#visit">Visit</a></li>
-      <li><a href="#donate">Donate</a></li>
-    </ul>
-  </nav>
 
   <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#">Love in Haight<br><span>Fairy Garden</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="menu">
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#shop">Honesty Plant Stand</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
     <div class="hero-inner">
       <h1>Welcome to Love in Haight Fairy Garden</h1>
       <p class="lead">A sidewalk garden and art installation bringing a little magic to the Haight Ashbury neighborhood of San Francisco.</p>
+      <div class="cta-row">
+        <a class="btn" href="#gallery">Browse the gallery</a>
+        <a class="btn btn-ghost" href="#donate">Support the garden</a>
+      </div>
     </div>
-    <div class="wave"></div>
+    <div class="wave" aria-hidden="true"></div>
   </header>
 
   <main id="main">
-    <!-- History -->
-    <section id="history" class="section">
-      <div class="container">
-        <h2>History</h2>
-        <p>The garden began in November of 2022 as a simple plant display. Over time, it blossomed into a full sidewalk art installation and community-loved fairy garden. Photos of these early beginnings will be added here soon!</p>
-      </div>
-    </section>
-
-    <!-- What is this place? -->
-    <section id="about" class="section alt">
+    <!-- ABOUT -->
+    <section id="about" class="section">
       <div class="container grid2">
         <div>
           <h2>What’s this magical place, you ask?</h2>
-          <p>
-            The Love in Haight Fairy Garden is a sidewalk succulent garden and art installation that aims to touch all those who pass by with its magic and lend a sense of awe and wonder to the every day. The garden is comprised of countless individual arrangements that come together and give form to an ever-changing structure.
-          </p>
-          <p>
-            The garden heavily promotes the use of upcycled containers paired with rare and unique succulents that are never seen outside of private collections. While fairies, gnomes, and other creatures can be spotted throughout the garden by day, the real magic comes alive at night as the garden transforms into a fairy lit wonderland.
-          </p>
-          <p>
-            It’s run as a neighborhood nonprofit project to beautify the area, spark joy, and invite play. All are welcome to explore respectfully, take photos, and share.
-          </p>
+          <p>The Love in Haight Fairy Garden is a sidewalk succulent garden and art installation that aims to touch all those who pass by with its magic and lend a sense of awe and wonder to the every day. The garden is comprised of countless individual arrangements that come together and give form to an ever-changing structure.</p>
+          <p>The garden heavily promotes the use of upcycled containers paired with rare and unique succulents that are never seen outside of private collections. While fairies, gnomes, and other creatures can be spotted throughout the garden by day, the real magic comes alive at night as the garden transforms into a fairy lit wonderland.</p>
+          <p>It’s run as a neighborhood nonprofit project to beautify the area, spark joy, and invite play. All are welcome to explore respectfully, take photos, and share.</p>
         </div>
+
         <div class="card soft">
           <h3>Quick Facts</h3>
           <ul class="checklist">
-            <li>Location: Masonic & Page, San Francisco</li>
+            <li>Location: Masonic &amp; Page, San Francisco</li>
             <li>Open: 24/7 sidewalk art installation—fairy garden by day, magical light show by night</li>
-            <li>Honesty Plant Shop with lovingly crafted succulent arrangements</li>
-            <li>Instagram: @love_in_haight</li>
+            <li>Honesty Plant Shop</li>
+            <li>Instagram: <a href="https://instagram.com/love_in_haight" target="_blank" rel="noopener">@love_in_haight</a></li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="section">
+    <!-- GALLERY -->
+    <section id="gallery" class="section alt">
       <div class="container">
         <h2>Gallery</h2>
         <div class="gallery">
-          <figure><img src="assets/Daygarden1.jpg" alt="An enchanting view capturing the length of the garden"><figcaption>Daytime garden view 1</figcaption></figure>
-          <figure><img src="assets/Daygarden2.jpg" alt="Main display table pairing artfully arranged succulents in upcycled arrangements"><figcaption>Daytime garden view 2</figcaption></figure>
-          <figure><img src="assets/Daygarden3.jpg" alt="Tiered planters bursting with rare succulents"><figcaption>Daytime garden view 3</figcaption></figure>
-          <figure><img src="assets/Gardensign.jpg" alt="Garden sign blending into whimsical surroundings"><figcaption>Garden Sign</figcaption></figure>
-          <figure><img src="assets/Nightgarden1.jpg" alt="Fairy garden glowing at night"><figcaption>Nighttime garden view 1</figcaption></figure>
-          <figure><img src="assets/Nightgarden2.jpg" alt="Colorfully lit mushrooms lighting a magical path"><figcaption>Nighttime garden view 2</figcaption></figure>
-          <figure><img src="assets/Typewriter.jpg" alt="Vintage typewriter planter"><figcaption>Typewriter planter</figcaption></figure>
-          <figure><img src="assets/Succulent-Wall.jpg" alt="Succulent wall arrangement"><figcaption>Succulent Wall</figcaption></figure>
+          <figure>
+            <img src="assets/Daygarden1.jpg" alt="An enchanting view capturing the length of the garden" loading="lazy">
+            <figcaption>Daytime garden view 1</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/Daygarden2.jpg" alt="Main display table pairing artfully arranged succulents in upcycled containers" loading="lazy">
+            <figcaption>Daytime garden view 2</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/Daygarden3.jpg" alt="Tiered planters filled with rare succulents for architectural elegance" loading="lazy">
+            <figcaption>Daytime garden view 3</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/Gardensign.jpg" alt="Love in Haight Fairy Garden sign in a whimsical setting" loading="lazy">
+            <figcaption>Garden Sign</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/Nightgarden1.jpg" alt="The fairy garden’s mystical transformation after dark" loading="lazy">
+            <figcaption>Nighttime garden view 1</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/Nightgarden2.jpg" alt="Colorfully lit mushrooms create a magical nighttime path" loading="lazy">
+            <figcaption>Nighttime garden view 2</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/Typewriter.jpg" alt="Vintage typewriter planter after three years of its second life with succulents" loading="lazy">
+            <figcaption>Typewriter planter</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/Succulent-Wall.jpg" alt="Succulent wall arrangement—one of the first pieces" loading="lazy">
+            <figcaption>Succulent Wall</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- Explore -->
-    <section id="explore" class="section alt">
-      <div class="container">
-        <h2>Explore</h2>
-        <p>Discover stories that delve into the garden’s various nooks and crannies—from closeup profiles of individual succulents and specific arrangements, to the creation process and garden’s evolution over the years.</p>
+    <!-- EXPLORE (renamed from Stories; original structure/content kept) -->
+    <section id="explore" class="section">
+      <div class="container grid2">
+        <div>
+          <h2>Explore</h2>
+          <p>Discover stories that delve into the garden’s various nooks and crannies—from closeup profiles of <strong>individual succulents and specific arrangements</strong>, to the creation process and the garden’s evolution over the years.</p>
+          <p>Be the first to hear about special arrangements before they hit the Honesty Plant Shop!</p>
+        </div>
+        <div class="card">
+          <h3>Instagram</h3>
+          <p>Follow along at <a href="https://instagram.com/love_in_haight" target="_blank" rel="noopener">@love_in_haight</a>.</p>
+          <div class="embed">
+            <iframe title="Instagram embed" loading="lazy" srcdoc="
+              <style>body{font-family:Inter,system-ui,sans-serif;padding:1rem} .ph{border:1px solid #ddd;border-radius:12px;padding:1rem;text-align:center}</style>
+              <div class='ph'>Instagram content preview<br/>Replace with official embed later.</div>"></iframe>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Honesty Plant Stand -->
-    <section id="plantstand" class="section">
+    <!-- HONESTY PLANT STAND -->
+    <section id="shop" class="section alt">
       <div class="container grid2">
         <div>
           <h2>Honesty Plant Stand</h2>
-          <p>Take what you love, pay what you can! All proceeds go to supporting the garden.</p>
+          <p class="lead">Take what you love, pay what you can! All proceeds go to supporting the garden.</p>
+          <p>Fair-weather pop-ups on the sidewalk. Bring small bills or use the QR code at the stand when available.</p>
         </div>
-        <div class="card">
-          <img src="assets/plantstand-placeholder.jpg" alt="Placeholder image for the plant stand">
-        </div>
+
+        <!-- Photo placeholder (replace with your real plant stand image when ready) -->
+        <figure class="card soft">
+          <img src="assets/plant-stand-placeholder.jpg" alt="Honesty Plant Stand display (placeholder image — replace with your photo)" loading="lazy">
+          <figcaption style="text-align:center; font-size:.9rem; color:var(--ink-soft); margin-top:.5rem;">Honesty Plant Stand (placeholder — upload your photo to <code>assets/plant-stand-placeholder.jpg</code>)</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- Visit (moved before donate) -->
-    <section id="visit" class="section alt">
+    <!-- VISIT (moved to just before Donate) -->
+    <section id="visit" class="section">
       <div class="container">
         <h2>Visit</h2>
-        <p>The Love in Haight Fairy Garden is located at the corner of Masonic & Page in San Francisco. Open to everyone, day and night—come experience the garden’s ever-changing magic in person.</p>
+        <p>Please be kind to the plants and neighbors. Stay on the sidewalk, don’t pick arrangements, and keep pups leashed. If you enjoyed your visit, consider a small donation below.</p>
+        <div class="embed">
+          <iframe title="Map to Love in Haight Fairy Garden" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Masonic%20and%20Page,%20San%20Francisco&output=embed"></iframe>
+        </div>
       </div>
     </section>
 
-    <!-- Donate -->
+    <!-- DONATE -->
     <section id="donate" class="section">
-      <div class="container">
-        <h2>Donate</h2>
-        <p>Your support helps keep the garden thriving! Contributions go toward succulents, soil, and whimsical touches that bring magic to the neighborhood.</p>
-        <div class="donate-grid">
-          <a class="btn" href="#">Donate via PayPal</a>
-          <a class="btn btn-ghost" href="#">Other ways to support</a>
+      <div class="container grid2">
+        <div>
+          <h2>Donate</h2>
+          <p>Your support helps with soil, gravel, planters, and replacement plants. Thank you for keeping the magic alive.</p>
+          <div class="donate-grid">
+            <a class="btn" href="#" aria-disabled="true">Donate via PayPal (coming soon)</a>
+            <a class="btn btn-ghost" href="#" aria-disabled="true">Venmo (coming soon)</a>
+          </div>
         </div>
+        <div class="card">
+          <h3>In-kind donations</h3>
+          <p>Succulents, gravel, pumice, lava rock, planters, and fairy trinkets are always appreciated. Please DM on Instagram for drop-offs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container grid2">
+        <div>
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:hello@loveinhaight.org">hello@loveinhaight.org</a> (placeholder)</p>
+          <p>Instagram: <a href="https://instagram.com/love_in_haight" target="_blank" rel="noopener">@love_in_haight</a></p>
+        </div>
+        <form class="card" id="contact-form" netlify>
+          <h3>Send a note</h3>
+          <label> Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label> Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label> Message
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+          <p class="form-note">By sending, you agree to the <a href="#privacy">privacy policy</a>.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section id="privacy" class="section alt">
+      <div class="container">
+        <h2>Privacy Policy (Simple)</h2>
+        <p>We only use your message to reply and don’t share or sell your info. If you want us to delete a message, just ask via email.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-grid">
-      <p>&copy; 2025 Love in Haight Fairy Garden</p>
+    <div class="container footer-grid">
+      <p>&copy; <span id="year"></span> Love in Haight Fairy Garden • A neighborhood nonprofit project • Masonic &amp; Page, San Francisco</p>
       <ul class="social">
-        <li><a href="https://instagram.com/love_in_haight">Instagram</a></li>
+        <li><a href="https://instagram.com/love_in_haight" aria-label="Instagram">@love_in_haight</a></li>
       </ul>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
