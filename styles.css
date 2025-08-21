@@ -46,18 +46,38 @@ img{max-width:100%;height:auto;display:block}
 .embed{aspect-ratio:16/9;background:#fff;border:1px solid #eaeaea;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
 .embed iframe{width:100%;height:100%;border:0}
 
-/* ---------- Responsive gallery grid ---------- */
+/* Masonry layout using CSS columns */
 .gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);   /* Desktop: 3 across */
-  gap:1rem;
+  column-count: 3;          /* desktop */
+  column-gap: 1rem;
 }
 @media (max-width:980px){
-  .gallery{grid-template-columns:repeat(2,1fr)}  /* Tablet: 2 across */
+  .gallery{ column-count: 2; }  /* tablet */
 }
 @media (max-width:620px){
-  .gallery{grid-template-columns:1fr}            /* Mobile: 1 across */
+  .gallery{ column-count: 1; }  /* mobile */
 }
+
+/* Make each tile avoid breaking across columns */
+.gallery figure{
+  display: inline-block;    /* required to flow into columns */
+  width: 100%;
+  margin: 0 0 1rem;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+
+  /* keep your existing card styling */
+  position: relative;
+  overflow: hidden;
+  background:#fff;
+  border-radius:10px;
+  box-shadow: var(--shadow);
+
+  /* remove any reveal defaults if you still had them: */
+  /* opacity: 1; transform: none; */
+}
+
 
 /* ---------- Hover overlay captions + zoom ---------- */
 .gallery figure{
