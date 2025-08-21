@@ -46,66 +46,45 @@ img{max-width:100%;height:auto;display:block}
 .embed{aspect-ratio:16/9;background:#fff;border:1px solid #eaeaea;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
 .embed iframe{width:100%;height:100%;border:0}
 
-/* Masonry layout using CSS columns */
+/* ---------- Masonry gallery (CSS columns) ---------- */
 .gallery{
-  column-count: 3;          /* desktop */
+  column-count: 3;       /* desktop */
   column-gap: 1rem;
 }
 @media (max-width:980px){
-  .gallery{ column-count: 2; }  /* tablet */
+  .gallery{ column-count: 2; }   /* tablet */
 }
 @media (max-width:620px){
-  .gallery{ column-count: 1; }  /* mobile */
+  .gallery{ column-count: 1; }   /* mobile */
 }
 
-/* Make each tile avoid breaking across columns */
+/* Tiles flow into columns; avoid breaking across columns */
 .gallery figure{
-  display: inline-block;    /* required to flow into columns */
+  display: inline-block;         /* required for columns flow */
   width: 100%;
   margin: 0 0 1rem;
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
 
-  /* keep your existing card styling */
   position: relative;
   overflow: hidden;
   background:#fff;
   border-radius:10px;
   box-shadow: var(--shadow);
-
-  /* remove any reveal defaults if you still had them: */
-  /* opacity: 1; transform: none; */
 }
 
-
-/* ---------- Hover overlay captions + zoom ---------- */
-.gallery figure{
-  position:relative;
-  overflow:hidden;
-  margin:0;
-  background:#fff;
-  border-radius:10px;
-  box-shadow:var(--shadow);
-  opacity:0;                  /* start hidden for scroll reveal */
-  transform:translateY(30px); /* slide-up effect */
-  transition:opacity .8s ease, transform .8s ease;
-}
-.gallery figure.revealed{
-  opacity:1;
-  transform:translateY(0);
-}
 .gallery img{
   width:100%;
   height:auto;
   display:block;
-  transition:transform .4s ease;
+  transition: transform .4s ease;
 }
-/* overlay caption (hidden by default) */
+
+/* Hover overlay caption */
 .gallery figure>figcaption{
   position:absolute;
-  left:0; bottom:0;
-  width:100%;
+  left:0; bottom:0; width:100%;
   padding:.5rem .6rem;
   background:rgba(0,0,0,.5);
   color:#fff;
@@ -117,12 +96,13 @@ img{max-width:100%;height:auto;display:block}
   transition:opacity .4s ease;
   margin-top:0;
 }
-.gallery figure:hover img{ transform:scale(1.03) }
-.gallery figure:hover>figcaption{ opacity:1 }
+
+.gallery figure:hover img{ transform: scale(1.03); }
+.gallery figure:hover>figcaption{ opacity:1; }
 
 /* Always show captions on touch devices (no hover) */
 @media (hover:none){
-  .gallery figure>figcaption{ opacity:1 }
+  .gallery figure>figcaption{ opacity:1; }
 }
 
 /* ---------- Rest of layout ---------- */
