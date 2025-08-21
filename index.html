@@ -211,20 +211,50 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const figures = document.querySelectorAll(".gallery figure");
-  const observer = new IntersectionObserver(entries => {
+
+  // Fallback: if IntersectionObserver is missing, just show everything
+  if (!("IntersectionObserver" in window)) {
+    figures.forEach(f => f.classList.add("revealed"));
+    return;
+  }
+
+  const revealNowIfVisible = (el) => {
+    const rect = el.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    // If top is within 85% of viewport height, consider it visible
+    if (rect.top < vh * 0.85) el.classList.add("revealed");
+  };
+
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("revealed");
-        observer.unobserve(entry.target); // reveal once
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, {
+    root: null,
+    rootMargin: "0px 0px -10% 0px", // triggers a bit earlier near bottom
+    threshold: 0
+  });
 
-  figures.forEach(fig => observer.observe(fig));
+  // Reveal anything already in view, then observe all
+  figures.forEach(fig => {
+    revealNowIfVisible(fig);
+    if (!fig.classList.contains("revealed")) observer.observe(fig);
+  });
+
+  // Also run once after a tick to handle fonts/layout shifts
+  setTimeout(() => {
+    figures.forEach(fig => {
+      if (!fig.classList.contains("revealed")) revealNowIfVisible(fig);
+    });
+  }, 150);
 });
 </script>
+  
 </body>
 </html>
