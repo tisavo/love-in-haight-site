@@ -211,5 +211,20 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const figures = document.querySelectorAll(".gallery figure");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        observer.unobserve(entry.target); // reveal once
+      }
+    });
+  }, { threshold: 0.15 });
+
+  figures.forEach(fig => observer.observe(fig));
+});
+</script>
 </body>
 </html>
